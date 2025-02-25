@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://disaster-management-api.onrender.com';
+export const BASE_URL = "http://localhost:3000";

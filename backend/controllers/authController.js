@@ -63,11 +63,11 @@ export const register = async (req, res, next) => {
       user: savedUser,
     });
   } catch (error) {
-    console.log(error);
+    console.error("Registration error:", error.message);
+    res
+      .status(500)
+      .json({ message: "Internal server error", error: error.message });
   }
-
-  // Pass other errors to the error handling middleware
-  next(error);
 };
 
 export const login = async (req, res, next) => {
